@@ -541,47 +541,9 @@ const LoginView = ({ onLogin }: { onLogin: () => void }) => {
                 </div>
               </div>
             </div>
-            {/* Footer Aesthetic */}
-            <div className="mt-6 flex justify-center space-x-4 sm:space-x-6 text-[9px] sm:text-[10px] uppercase tracking-widest text-on-surface-variant font-bold opacity-60">
-              <span className="flex items-center space-x-1">
-                <Shield size={12} />
-                <span>AES-256 Encrypted</span>
-              </span>
-              <span className="flex items-center space-x-1">
-                <CheckCircle2 size={12} />
-                <span>Tier 4 Compliance</span>
-              </span>
-            </div>
           </div>
         </div>
       </main>
-
-      {/* Footer Shared Component */}
-      <footer className="fixed bottom-0 w-full flex justify-center pb-8 pointer-events-none">
-        <div className="bg-surface/80 backdrop-blur-sm px-6 py-2 rounded-full flex space-x-8 pointer-events-auto">
-          <span className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70">© 2024 Azure Horizon Enterprise. ALL RIGHTS RESERVED.</span>
-          <div className="flex space-x-6">
-            <button 
-              onClick={() => toast.info('Privacy Policy loading...')}
-              className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity"
-            >
-              Privacy Policy
-            </button>
-            <button 
-              onClick={() => toast.info('Terms of Service loading...')}
-              className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity"
-            >
-              Terms of Service
-            </button>
-            <button 
-              onClick={() => toast.info('Security documentation loading...')}
-              className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity"
-            >
-              Security
-            </button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -48,6 +48,8 @@ import {
   Activity,
   Globe,
   Download,
+  Chrome,
+  Monitor,
   DollarSign,
   Plus,
   Edit,
@@ -527,14 +529,22 @@ const LoginView = ({ onLogin }: { onLogin: () => void }) => {
                   </button>
                 </form>
                 <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-slate-100">
-                  <div className="flex items-center justify-center space-x-4">
+                  <div className="flex items-center justify-center gap-4">
                     <span className="text-[10px] sm:text-xs text-slate-400 font-medium">Or connect with</span>
-                    <div className="flex space-x-3">
-                      <button className="p-2 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
-                        <img src="https://www.svgrepo.com/show/355037/google.svg" className="w-4 h-4" alt="Google" />
+                    <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        aria-label="Continue with Google"
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
+                      >
+                        <Chrome size={18} />
                       </button>
-                      <button className="p-2 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
-                        <img src="https://www.svgrepo.com/show/448234/microsoft.svg" className="w-4 h-4" alt="Microsoft" />
+                      <button
+                        type="button"
+                        aria-label="Continue with Microsoft"
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
+                      >
+                        <Monitor size={18} />
                       </button>
                     </div>
                   </div>

@@ -529,22 +529,24 @@ const LoginView = ({ onLogin }: { onLogin: () => void }) => {
                   </button>
                 </form>
                 <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-slate-100">
-                  <div className="flex items-center justify-center gap-4">
+                  <div className="flex flex-col items-center gap-4">
                     <span className="text-[10px] sm:text-xs text-slate-400 font-medium">Or connect with</span>
-                    <div className="flex items-center gap-3">
+                    <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
                       <button
                         type="button"
                         aria-label="Continue with Google"
-                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
+                        className="flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
                       >
                         <Chrome size={18} />
+                        <span>Google</span>
                       </button>
                       <button
                         type="button"
                         aria-label="Continue with Microsoft"
-                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
+                        className="flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
                       >
                         <Monitor size={18} />
+                        <span>Microsoft</span>
                       </button>
                     </div>
                   </div>

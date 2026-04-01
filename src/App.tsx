@@ -48,8 +48,6 @@ import {
   Activity,
   Globe,
   Download,
-  Chrome,
-  Monitor,
   DollarSign,
   Plus,
   Edit,
@@ -529,33 +527,61 @@ const LoginView = ({ onLogin }: { onLogin: () => void }) => {
                   </button>
                 </form>
                 <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-slate-100">
-                  <div className="flex flex-col items-center gap-4">
+                  <div className="flex items-center justify-center space-x-4">
                     <span className="text-[10px] sm:text-xs text-slate-400 font-medium">Or connect with</span>
-                    <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
-                      <button
-                        type="button"
-                        aria-label="Continue with Google"
-                        className="flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
-                      >
-                        <Chrome size={18} />
-                        <span>Google</span>
+                    <div className="flex space-x-3">
+                      <button className="p-2 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+                        <img src="https://www.svgrepo.com/show/355037/google.svg" className="w-4 h-4" alt="Google" />
                       </button>
-                      <button
-                        type="button"
-                        aria-label="Continue with Microsoft"
-                        className="flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary hover:shadow-md"
-                      >
-                        <Monitor size={18} />
-                        <span>Microsoft</span>
+                      <button className="p-2 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+                        <img src="https://www.svgrepo.com/show/448234/microsoft.svg" className="w-4 h-4" alt="Microsoft" />
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            {/* Footer Aesthetic */}
+            <div className="mt-6 flex justify-center space-x-4 sm:space-x-6 text-[9px] sm:text-[10px] uppercase tracking-widest text-on-surface-variant font-bold opacity-60">
+              <span className="flex items-center space-x-1">
+                <Shield size={12} />
+                <span>AES-256 Encrypted</span>
+              </span>
+              <span className="flex items-center space-x-1">
+                <CheckCircle2 size={12} />
+                <span>Tier 4 Compliance</span>
+              </span>
+            </div>
           </div>
         </div>
       </main>
+
+      {/* Footer Shared Component */}
+      <footer className="fixed bottom-0 w-full flex justify-center pb-8 pointer-events-none">
+        <div className="bg-surface/80 backdrop-blur-sm px-6 py-2 rounded-full flex space-x-8 pointer-events-auto">
+          <span className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70">© 2024 Azure Horizon Enterprise. ALL RIGHTS RESERVED.</span>
+          <div className="flex space-x-6">
+            <button 
+              onClick={() => toast.info('Privacy Policy loading...')}
+              className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity"
+            >
+              Privacy Policy
+            </button>
+            <button 
+              onClick={() => toast.info('Terms of Service loading...')}
+              className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity"
+            >
+              Terms of Service
+            </button>
+            <button 
+              onClick={() => toast.info('Security documentation loading...')}
+              className="text-[0.75rem] uppercase tracking-widest font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity"
+            >
+              Security
+            </button>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
